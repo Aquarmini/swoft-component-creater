@@ -4,7 +4,7 @@ $header = <<<'EOF'
 Swoft Entity Cache
 
 @author   limx <limingxin@swoft.org>
-@link     https://github.com/limingxinleo/swoft-component-creater
+@link     https://github.com/limingxinleo/swoft-aop-cacheable
 EOF;
 
 return PhpCsFixer\Config::create()
@@ -27,6 +27,8 @@ return PhpCsFixer\Config::create()
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->exclude('public')
+            ->exclude('resources')
+            ->exclude('config')
             ->exclude('runtime')
             ->exclude('vendor')
             ->in(__DIR__)

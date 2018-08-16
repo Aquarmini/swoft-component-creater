@@ -1,11 +1,9 @@
 <?php
 /**
- * This file is part of Swoft.
+ * Swoft Entity Cache
  *
- * @link     https://swoft.org
- * @document https://doc.swoft.org
- * @contact  limingxin@swoft.org
- * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
+ * @author   limx <limingxin@swoft.org>
+ * @link     https://github.com/limingxinleo/swoft-component-creater
  */
 
 !defined('DS') && define('DS', DIRECTORY_SEPARATOR);
