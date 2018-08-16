@@ -28,17 +28,23 @@ class ComponentCommand
      */
     public function initialize(Input $input, Output $output): int
     {
-        $component = $input->get('name', $input->get(0));
+        $component = $input->get('component', $input->get(0));
         if (is_null($component)) {
-            $output->writeln('The Component Name is required!', true, true);
+            $output->writeln('<error>The Component Name is required!</error>', true, true);
         }
 
-        list($group, $name) = explode('/', $component);
+        $componentArray = explode('/', $component);
+        $group = $componentArray[0] ?? null;
+        $name = $componentArray[1] ?? null;
+
+        if ($group == null || $name == null) {
+            $output->writeln('<error>The Component Name is invalid, Please input group/name!</error>', true, true);
+        }
+
         $description = $input->getOpt('description', '');
         $namespace = $input->getOpt('namespace', 'Swoftx\\Test\\');
         $auther = $input->getOpt('auther', '李铭昕');
         $email = $input->getOpt('email', 'limingxin@swoft.org');
-
 
         $output->colored('Ther Component Init Success!');
         return 0;
