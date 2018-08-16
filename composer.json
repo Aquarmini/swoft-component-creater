@@ -1,0 +1,30 @@
+{
+    "name": "limingxinleo/swoft-component-creater",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "component"
+    ],
+    "description": "Swoft 组件开发脚本",
+    "authors": [
+        {
+            "name": "李铭昕",
+            "email": "715557344@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Swoftx\\CsCreater\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "swoft/console": "^1.0"
+    },
+    "require-dev": {
+        "swoft/swoole-ide-helper": "dev-master"
+    }
+}
