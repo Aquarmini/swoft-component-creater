@@ -18,7 +18,7 @@
 $aliases = [
     '@root' => BASE_PATH,
     '@env' => '@root',
-    '@src' => '@root/src',
+    '@app' => '@root/src',
     '@runtime' => '@root/runtime',
     '@configs' => '@root/config',
     '@resources' => '@root/resources',

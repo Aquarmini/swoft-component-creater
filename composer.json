@@ -17,7 +17,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Swoftx\\CsCreater\\": "src/"
+            "Swoftx\\Creater\\": "src/"
         }
     },
     "require": {
