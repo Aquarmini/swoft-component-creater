@@ -27,7 +27,8 @@
         }
     },
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.0",
+        "swoft/framework": "^1.0.24"
     },
     "require-dev": {
         "swoft/swoole-ide-helper": "dev-master",

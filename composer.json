@@ -18,7 +18,10 @@
     "autoload": {
         "psr-4": {
             "Swoftx\\Creater\\": "src/"
-        }
+        },
+        "files": [
+            "src/helper.php"
+        ]
     },
     "require": {
         "php": ">=7.0",

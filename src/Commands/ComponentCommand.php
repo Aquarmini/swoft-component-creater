@@ -10,6 +10,7 @@ namespace Swoftx\Creater\Commands;
 use Swoft\Console\Bean\Annotation\Command;
 use Swoft\Console\Input\Input;
 use Swoft\Console\Output\Output;
+use Swoftx\Creater\Common\Writer;
 
 /**
  * This is a Component Command for Swoft
@@ -42,9 +43,17 @@ class ComponentCommand
         }
 
         $description = $input->getOpt('description', '');
-        $namespace = $input->getOpt('namespace', 'Swoftx\\Test\\');
+        $namespace = $input->getOpt('namespace', 'Swoftx\\\\Test\\\\');
         $auther = $input->getOpt('auther', '李铭昕');
         $email = $input->getOpt('email', 'limingxin@swoft.org');
+
+        $dst = getcwd();
+        $tpl = alias('@tpl');
+
+        copy_dir($tpl, $dst);
+
+        $writer = new Writer($component, $name, $description, $namespace, $auther, $email);
+        $writer->handle($dst);
 
         $output->colored('Ther Component Init Success!');
         return 0;
