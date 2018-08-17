@@ -24,7 +24,7 @@ class ComponentCommand
     /**
      * Init Component
      * @Usage {command} component
-     * @Example {command} limingxinleo/swoft-test
+     * @Example {command} limingxinleo/swoft-test --description=测试组件 --namespace=Swoftx\\\\TestComponent\\\\ --auther=李铭昕 --email=limingxin@swoft.org
      * @param Input  $input
      * @param Output $output
      * @return int
@@ -46,8 +46,8 @@ class ComponentCommand
 
         $description = $input->getOpt('description', '');
         $namespace = $input->getOpt('namespace', 'Swoftx\\\\Test\\\\');
-        $auther = $input->getOpt('auther', '李铭昕');
-        $email = $input->getOpt('email', 'limingxin@swoft.org');
+        $auther = $input->getOpt('auther', 'SwoftDeveloper');
+        $email = $input->getOpt('email', 'developer@swoft.org');
 
         $dst = getcwd();
         $tpl = alias('@tpl');
