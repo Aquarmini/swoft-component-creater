@@ -1,13 +1,26 @@
 <?php
+/**
+ * This file is part of Swoft.
+ *
+ * @link     https://swoft.org
+ * @document https://doc.swoft.org
+ * @contact  limingxin@swoft.org
+ * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
+ */
 namespace Swoftx\Creater\Common;
 
 class Writer
 {
     protected $component;
+
     protected $name;
+
     protected $description;
+
     protected $namespace;
+
     protected $auther;
+
     protected $email;
 
     public function __construct($component, $name, $description, $namespace, $auther, $email)

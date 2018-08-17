@@ -1,9 +1,11 @@
 <?php
 /**
- * Swoft Entity Cache
+ * This file is part of Swoft.
  *
- * @author   limx <limingxin@swoft.org>
- * @link     https://github.com/limingxinleo/swoft-component-creater
+ * @link     https://swoft.org
+ * @document https://doc.swoft.org
+ * @contact  limingxin@swoft.org
+ * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
 
 return [
