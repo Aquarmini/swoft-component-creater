@@ -22,3 +22,17 @@ function copy_dir($src, $dst)
     }
     closedir($dir);
 }
+
+function check_dir($dst)
+{
+    $dir = opendir($dst);
+    $isEmpty = true;
+    @mkdir($dst);
+    while (false !== ($file = readdir($dir))) {
+        if (($file != '.') && ($file != '..')) {
+            $isEmpty = false;
+        }
+    }
+    closedir($dir);
+    return $isEmpty;
+}

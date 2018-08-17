@@ -52,12 +52,16 @@ class ComponentCommand
         $dst = getcwd();
         $tpl = alias('@tpl');
 
+        if (!check_dir($dst)) {
+            $output->writeln('<error>The Component Dir is not Empty!</error>', true, true);
+        }
+
         copy_dir($tpl, $dst);
 
         $writer = new Writer($component, $name, $description, $namespace, $auther, $email);
         $writer->handle($dst);
 
-        $output->colored('Ther Component Init Success!');
+        $output->writeln('<success>The Component Init Success!!</success>', true);
         return 0;
     }
 }
