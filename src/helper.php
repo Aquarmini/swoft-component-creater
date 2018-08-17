@@ -12,7 +12,7 @@ function copy_dir($src, $dst)
     $dir = opendir($src);
     @mkdir($dst);
     while (false !== ($file = readdir($dir))) {
-        if (($file != '.') && ($file != '..')) {
+        if (($file != '.') && ($file != '..') && ($file != '.git')) {
             if (is_dir($src . '/' . $file)) {
                 copy_dir($src . '/' . $file, $dst . '/' . $file);
             } else {
@@ -29,7 +29,7 @@ function check_dir($dst)
     $isEmpty = true;
     @mkdir($dst);
     while (false !== ($file = readdir($dir))) {
-        if (($file != '.') && ($file != '..')) {
+        if (($file != '.') && ($file != '..') && ($file != '.git')) {
             $isEmpty = false;
         }
     }

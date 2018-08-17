@@ -37,7 +37,7 @@ class Writer
     {
         $dir = opendir($dst);
         while (false !== ($file = readdir($dir))) {
-            if (($file != '.') && ($file != '..')) {
+            if (($file != '.') && ($file != '..') && ($file != '.git')) {
                 if (is_dir($dst . '/' . $file)) {
                     $this->handle($dst . '/' . $file);
                 } else {
