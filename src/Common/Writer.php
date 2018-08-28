@@ -19,17 +19,17 @@ class Writer
 
     protected $namespace;
 
-    protected $auther;
+    protected $author;
 
     protected $email;
 
-    public function __construct($component, $name, $description, $namespace, $auther, $email)
+    public function __construct($component, $name, $description, $namespace, $author, $email)
     {
         $this->component = $component;
         $this->name = $name;
         $this->description = $description;
         $this->namespace = $namespace;
-        $this->auther = $auther;
+        $this->author = $author;
         $this->email = $email;
     }
 

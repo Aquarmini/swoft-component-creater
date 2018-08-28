@@ -18,7 +18,7 @@ bin/install.sh
 ~~~bash
 swoft-component component:initialize limingxinleo/swoft-test \
 --description=测试组件 --namespace=Swoftx\\\\TestComponent\\\\ \
---auther=李铭昕 --email=limingxin@swoft.org
+--author=李铭昕 --email=limingxin@swoft.org
 ~~~
 
 

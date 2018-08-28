@@ -24,7 +24,7 @@ class ComponentCommand
     /**
      * Init Component
      * @Usage {command} component
-     * @Example {command} limingxinleo/swoft-test --description=测试组件 --namespace=Swoftx\\\\TestComponent\\\\ --auther=李铭昕 --email=limingxin@swoft.org
+     * @Example {command} limingxinleo/swoft-test --description=测试组件 --namespace=Swoftx\\\\TestComponent\\\\ --author=李铭昕 --email=limingxin@swoft.org
      * @param Input  $input
      * @param Output $output
      * @return int
@@ -46,7 +46,7 @@ class ComponentCommand
 
         $description = $input->getOpt('description', '');
         $namespace = $input->getOpt('namespace', 'Swoftx\\\\Test\\\\');
-        $auther = $input->getOpt('auther', 'SwoftDeveloper');
+        $author = $input->getOpt('author', 'SwoftDeveloper');
         $email = $input->getOpt('email', 'developer@swoft.org');
 
         $dst = getcwd();
@@ -58,7 +58,7 @@ class ComponentCommand
 
         copy_dir($tpl, $dst);
 
-        $writer = new Writer($component, $name, $description, $namespace, $auther, $email);
+        $writer = new Writer($component, $name, $description, $namespace, $author, $email);
         $writer->handle($dst);
 
         $output->writeln('<success>The Component Init Success!!</success>', true);
