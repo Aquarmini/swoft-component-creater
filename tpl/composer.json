@@ -33,5 +33,12 @@
     "require-dev": {
         "swoft/swoole-ide-helper": "dev-master",
         "phpunit/phpunit": "^5.7"
+    },
+    "extra": {
+        "config-plugin": {
+            "swoft.components": [
+                "config/components.php"
+            ]
+        }
     }
 }
