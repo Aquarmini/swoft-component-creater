@@ -50,7 +50,8 @@ class ComponentCommand
         $email = $input->getOpt('email', 'developer@swoft.org');
 
         $dst = getcwd();
-        $tpl = alias('@tpl');
+        $tpl = $input->getOpt('tpl', 'swoft');
+        $tpl = alias('@template/' . $tpl);
 
         if (!check_dir($dst)) {
             $output->writeln('<error>The Component Dir is not Empty!</error>', true, true);

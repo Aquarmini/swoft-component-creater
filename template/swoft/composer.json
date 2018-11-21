@@ -1,0 +1,45 @@
+{
+    "name": "{{component}}",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "swoole",
+        "swoft",
+        "db",
+        "model"
+    ],
+    "description": "{{description}}",
+    "authors": [
+        {
+            "name": "{{author}}",
+            "email": "{{email}}"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "{{namespace}}": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwoftTest\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "swoft/framework": "^1.0.24"
+    },
+    "require-dev": {
+        "swoft/swoole-ide-helper": "dev-master",
+        "phpunit/phpunit": "^5.7",
+        "phpstan/phpstan": "^0.10.5"
+    },
+    "extra": {
+        "config-plugin": {
+            "swoft.components": [
+                "config/components.php"
+            ]
+        }
+    }
+}
