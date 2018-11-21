@@ -13,8 +13,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Class AbstractTestCase
- *
- * @package SwoftTest\Db\Cases
  */
 abstract class AbstractTestCase extends TestCase
 {
