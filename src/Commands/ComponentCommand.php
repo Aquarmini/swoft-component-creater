@@ -51,7 +51,7 @@ class ComponentCommand
 
         $dst = getcwd();
         $tpl = $input->getOpt('tpl', 'swoft');
-        $tpl = alias('@template/' . $tpl);
+        $tpl = alias('@tpl/' . $tpl);
 
         if (!check_dir($dst)) {
             $output->writeln('<error>The Component Dir is not Empty!</error>', true, true);
