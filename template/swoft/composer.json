@@ -6,8 +6,7 @@
         "php",
         "swoole",
         "swoft",
-        "db",
-        "model"
+        "component"
     ],
     "description": "{{description}}",
     "authors": [

@@ -29,9 +29,9 @@ before_install:
 install:
   - cd $TRAVIS_BUILD_DIR
   # 更新扩展
-  - bash tests/swoole.install.sh
   - phpenv config-rm xdebug.ini
-  - phpenv config-add tests/ci.ini
+  #- bash tests/swoole.install.sh
+  #- phpenv config-add tests/ci.ini
   # 安装项目
   - composer self-update
   - cd $TRAVIS_BUILD_DIR
@@ -39,4 +39,5 @@ install:
 
 script:
   - cd $TRAVIS_BUILD_DIR
+  - ./vendor/bin/phpstan analyse src
   - ./vendor/bin/phpunit
