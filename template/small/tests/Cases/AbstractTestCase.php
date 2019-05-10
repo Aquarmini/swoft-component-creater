@@ -1,6 +1,6 @@
 <?php
 
-namespace SwoftTest\Cases;
+namespace Test\Cases;
 
 use PHPUnit\Framework\TestCase;
 
